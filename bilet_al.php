@@ -6,8 +6,7 @@ require_once 'db.php';
 // Kullanıcı giriş yapmamışsa, onu giriş sayfasına yönlendir.
 if (!isset($_SESSION['user_id'])) {
     // 
-    header("Location: giris_yap.php?error=login_required");
-    exit;
+header("Location: auth.php");    exit;
 }
 
 // URL'den sefer ID'sini al. Eğer yoksa veya geçersizse ana sayfaya yönlendir.

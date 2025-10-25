@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && (isset($_GET['departure_city']) || is
                 <a href="biletlerim.php">Biletlerim</a>
                 <a href="auth.php?action=logout">Çıkış Yap</a>
             <?php else: ?>
-                <a href="giris_yap.php">Giriş Yap</a>
+                <a href="auth.php">Giriş Yap</a>
                 <a href="kayit_ol.php">Kayıt Ol</a>
             <?php endif; ?>
         </nav>

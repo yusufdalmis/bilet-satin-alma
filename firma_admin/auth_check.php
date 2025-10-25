@@ -8,7 +8,7 @@ log_message("Session içindeki company_id: " . ($_SESSION['user_company_id'] ?? 
 
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'company_admin') {
     log_message("YETKİSİZ ERİŞİM! Giriş sayfasına yönlendiriliyor.");
-    header("Location: ../giris_yap.php");
+    header("Location: ../auth.php");
     exit;
 }
 

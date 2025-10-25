@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$full_name, $email, $hashed_password]);
 
         // Kayıt başarılıysa, kullanıcıyı giriş sayfasına yönlendir.
-        header("Location: giris_yap.php?status=success");
+        header("Location: auth.php?action=show_login_form&status=success");
         exit;
 
     } catch (PDOException $e) {
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="email" name="email" placeholder="E-posta Adresiniz" required>
         <input type="password" name="password" placeholder="Şifreniz" required>
         <button type="submit">Kayıt Ol</button>
-        <p>Zaten bir hesabınız var mı? <a href="giris_yap.php">Giriş Yapın</a></p>
+        <p>Zaten bir hesabınız var mı? <a href="auth.php">Giriş Yapın</a></p>
     </form>
 </body>
 </html>
